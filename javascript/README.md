@@ -1,15 +1,13 @@
-# Coding Test for JavaScript
+<h1>Coding Test for JavaScript</h1>
 
-## [배열](#🌈-배열)
-
-- [forEach](#💫-foreach)
-- [map](#💫-map)
-- [filter](#💫-filter)
-- [reduce](#💫-reduce)
-
-## [Math](#🌈-math)
-
-- [최솟값, 최댓값 구하기](#💫-최솟값-최댓값-구하기)
+- [🌈 배열](#-배열)
+  - [💫 forEach](#-foreach)
+  - [💫 map](#-map)
+  - [💫 filter](#-filter)
+  - [💫 reduce](#-reduce)
+  - [💫 replace](#-replace)
+- [🌈 Math](#-math)
+  - [💫 최솟값, 최댓값 구하기](#-최솟값-최댓값-구하기)
 
 <br />
 <br />
