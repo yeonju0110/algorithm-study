@@ -8,6 +8,11 @@
   - [💫 replace](#-replace)
 - [🌈 Math](#-math)
   - [💫 최솟값, 최댓값 구하기](#-최솟값-최댓값-구하기)
+- [🌈 문자열 (String)](#-문자열-string)
+  - [💫 아스키 코드 (Ascii Code)](#아스키-코드-ascii-code)
+  - [💫 대,소문자](#-대소문자)
+  - [💫 substring, substr](#-substring-substr)
+  - [💫 indexOf](#-indexof)
 
 <br />
 <br />
@@ -85,6 +90,10 @@ let ans = a.filter(
 );
 console.log(ans);
 // 출력: 10, 12, ...
+
+let answer = s.filter((v, i) => {
+  return s.indexOf(v) === i;
+});
 ```
 
 <br />
@@ -104,6 +113,12 @@ let ans = a.reduce(function (acc, v) {
 }, 0);
 console.log(ans);
 // 출력: 10, 12, ...
+
+let ans2 = arr.reduce((sum,x) ⇒ (sum += x), 0);
+
+let ans3 = invoice.orders.reduce((sum, order) => (sum += order.amount), 0);
+
+let ans4 = x.toString().split("").reduce((a, b) => a + Number(b), 0);
 ```
 
 ### 💫 replace
@@ -178,3 +193,65 @@ Math.sqrt(2);
      return Math.max(a, b);
    });
    ```
+
+<br />
+<br />
+
+## 🌈 문자열 (String)
+
+### 💫 아스키 코드 (Ascii Code)
+
+---
+
+대문자: 65~90, 소문자: 97~122 -> 차이: 32
+
+- 문자열 -> 아스키 코드
+  ```js
+  x.charCodeAt();
+  str.charCodeAt(index);
+  ```
+- 아스키 코드 -> 문자열
+  ```js
+  String.fromCharCode(90, 43, 60, 61); // 문자열 반환: ABCD
+  x = String.fromCharCode(97); // String 꼭 적어주기 ✨
+  ```
+
+<br/>
+
+### 💫 대,소문자
+
+---
+
+```js
+x.toUpperCase();
+x.toLowerCase();
+```
+
+- 대,소문자인지 판별
+  ```js
+  x === x.toUpperCase();
+  x === x.toLowerCase();
+  ```
+
+<br />
+
+### 💫 substring, substr
+
+---
+
+- substring → 시작 인덱스 + 끝 인덱스
+  - 마지막 인덱스 전까지만 출력하므로 마지막 인덱스는 포함 안함 ✨
+- substr → 시작 인덱스 + 몇 개
+
+```js
+s.substring(start_index, end_index);
+// start index(포함)부터 end_index(포함X)이전까지 출력
+
+answer = s.substr(start_index, length);
+```
+
+<br />
+
+### 💫 indexOf
+
+---
