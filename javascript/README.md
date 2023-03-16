@@ -1,11 +1,13 @@
 <h1>Coding Test for JavaScript</h1>
 
-- [🌈 배열](#-배열)
+- [🌈 배열 (Array)](#-배열-array)
   - [💫 forEach](#-foreach)
   - [💫 map](#-map)
   - [💫 filter](#-filter)
   - [💫 reduce](#-reduce)
   - [💫 replace](#-replace)
+  - [💫 includes](#-includes)
+  - [💫 Array.from()](#-arrayfrom)
 - [🌈 Math](#-math)
   - [💫 최솟값, 최댓값 구하기](#-최솟값-최댓값-구하기)
 - [🌈 문자열 (String)](#-문자열-string)
@@ -17,7 +19,7 @@
 <br />
 <br />
 
-## 🌈 배열
+## 🌈 배열 (Array)
 
 <br />
 
@@ -156,6 +158,25 @@ let ans4 = x.toString().split("").reduce((a, b) => a + Number(b), 0);
    ```
 
 <br />
+
+### 💫 includes
+
+- 배열이 특정 요소를 포함하고 있는지 판별
+- return 값 = boolean
+
+```js
+const array1 = [1, 2, 3];
+
+console.log(array1.includes(2)); // true
+```
+
+### 💫 Array.from()
+
+```js
+Array.from({ length: n }, () => 1); // TODO
+```
+
+<br />
 <br />
 
 ## 🌈 Math
@@ -255,3 +276,12 @@ answer = s.substr(start_index, length);
 ### 💫 indexOf
 
 ---
+
+- 호출한 String 객체에서 주어진 값과 일치하는 `첫 번째` 인덱스를 반환
+- 일치하는 값이 없다면 -1을 반환
+
+```js
+str.indexOf('string');
+
+if(str.indexOf(str[i]) === i) // 중복문자제거
+```
