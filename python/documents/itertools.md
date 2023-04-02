@@ -16,7 +16,7 @@
   - [📑 1. product](#---1-product)
   - [📑 2. permutations](#---2-permutations)
   - [📑 3. combinations](#---3-combinations)
-    - [📑 4. combinations_with_replacement](#---4-combinations-with-replacement)
+  - [📑 4. combinations_with_replacement](#---4-combinations-with-replacement)
 
 <br />
 <br />
