@@ -33,3 +33,5 @@ def promising():
   <!-- - [BOJ_14889](../boj/14889.ipynb) -->
   <!-- - [BOJ_15684](../boj/15684.ipynb) -->
 - [BOJ_15686](../boj/15686.ipynb)
+- [PRO\_최소직사각형](../programmers/%EC%B5%9C%EC%86%8C%EC%A7%81%EC%82%AC%EA%B0%81%ED%98%95.ipynb)
+- [PRO\_모의고사](../programmers/%EB%AA%A8%EC%9D%98%EA%B3%A0%EC%82%AC.ipynb)
