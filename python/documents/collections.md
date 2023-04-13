@@ -79,6 +79,20 @@ print(counter['green']) # 1
 print(dict(counter)) # 사전 자료형으로 변환 {'red': 2, 'blue': 3, 'green': 1}
 ```
 
+- Counter끼리 빼기가 가능하다. (공통된 요소를 없애줄 수 있다.)
+
+```py
+from collections import Counter
+
+def solution(participant, completion):
+    cnt1 = Counter(participant)
+    cnt2 = Counter(completion)
+
+    return list((cnt1 - cnt2).keys())[0]
+
+solution(["leo", "kiki", "eden"], ["eden", "kiki"]) # 'leo'
+```
+
 <br />
 
 ### values
@@ -114,4 +128,15 @@ p.x, p.y # (11, 22)
 p[x] # NO!!
 i, j = p
 i, j # (10, 22)
+```
+
+## 📑 defaultdict
+
+- 누락된 값을 제공하기 위해 팩토리 함수를 호출하는 딕셔너리 서브 클래스
+- key값이 없을 때 default값을 정해서 새로 생성해줌
+
+```py
+graph = defaultdict(list)
+for s, e in tickets:
+    graph[s].append(e)
 ```
