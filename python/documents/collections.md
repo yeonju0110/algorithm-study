@@ -24,12 +24,12 @@
 - maxlen도 지정해줄 수 있음
 
   ```python
-      from collections import deque
+  from collections import deque
 
-      l = [''] * 3
-      cache = deque(l, maxlen=3)
-      cache.append('hello')
-      print(cache) # ['', '', 'hello']
+  l = [''] * 3
+  cache = deque(l, maxlen=3)
+  cache.append('hello')
+  print(cache) # ['', '', 'hello']
 
   from collections import deque
 
@@ -41,7 +41,7 @@
   print(list(data)) # 리스트 자료형으로 변환 [1, 2, 3, 4, 5]
   ```
 
-  - rotate(): 순회 가능
+- rotate(): 순회 가능
 
   ```python
   deq = deque('abcde')
