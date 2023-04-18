@@ -29,10 +29,10 @@
 
 - ex. 힙에서 최댓값을 제거하는 경우
 
-```py
-heap.remove(max(heap))
-heapify(heap)
-```
+  ```py
+  heap.remove(max(heap))
+  heapify(heap)
+  ```
 
 <br />
 
