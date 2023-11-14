@@ -34,3 +34,11 @@
   Math.max(width, height);
   Math.max(...arr);
 }
+
+/**
+ * set
+ */
+{
+  const set = new Set([1, 2]);
+  set.size; // 길이
+}
