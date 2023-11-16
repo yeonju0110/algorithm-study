@@ -11,7 +11,8 @@
  */
 {
   const arr = [1, 2, 3];
-  arr.push(4); // 삽입
+  arr.push(4); // 뒤에 삽입
+  arr.unshift(4); // 앞에 삽입 ⭐️
   arr.pop(4); // 삭제
 }
 
@@ -19,7 +20,8 @@
  * 원하는 길이/값으로 배열 초기화
  */
 {
-  let visited = new Array(8).fill(0);
+  let visited = new Array(8).fill(0); // 1차원
+  const arr1 = Array.from(Array(5), () => new Array(2)); // 2차원
 }
 
 /**
