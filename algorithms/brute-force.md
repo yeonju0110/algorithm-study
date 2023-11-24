@@ -27,19 +27,3 @@ def promising():
     if 한정조건: return True
     return False
 ```
-
-### 🫧 문제풀이
-
-- [BOJ_2661](../boj/2661.ipynb)
-- [BOJ_2798](../boj/2798.ipynb)
-- [BOJ_9663](../boj/9663.ipynb)
-- [BOJ_10819](../boj/10819.ipynb)
-- [BOJ_14888](../boj/14888.ipynb)
-  <!-- - [BOJ_14889](../boj/14889.ipynb) -->
-  <!-- - [BOJ_15684](../boj/15684.ipynb) -->
-- [BOJ_15686](../boj/15686.ipynb)
-- [PRO\_최소직사각형](../programmers/%EC%B5%9C%EC%86%8C%EC%A7%81%EC%82%AC%EA%B0%81%ED%98%95.ipynb)
-- [PRO\_모의고사](../programmers/%EB%AA%A8%EC%9D%98%EA%B3%A0%EC%82%AC.ipynb)
-- [PRO\_소수찾기](../programmers/%EC%86%8C%EC%88%98%EC%B0%BE%EA%B8%B0.ipynb)
-- [PRO\_카펫](../programmers/%EC%B9%B4%ED%8E%AB.ipynb)
-- [PRO\_피로도](../programmers/%ED%94%BC%EB%A1%9C%EB%8F%84.ipynb)
