@@ -83,3 +83,10 @@
   console.log(fruits.lastIndexOf("🍎")); // 5: 제일 마지막에 나오는 값
   console.log(fruits.includes("🍎")); // true
 }
+
+/**
+ * 전체 멤버를 number로 변경
+ */
+{
+  const [n, k] = array.map(Number);
+}
