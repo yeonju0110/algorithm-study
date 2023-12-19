@@ -90,3 +90,21 @@
 {
   const [n, k] = array.map(Number);
 }
+
+/**
+ * 배열 돌리기
+ */
+{
+  // 행열 바꾸기
+  function transposeMatrix(maps) {
+    return maps[0].map((_, index) => maps.map((row) => row[index]));
+  }
+
+  function reverseRows(maps) {
+    return maps.map((row) => row.reverse());
+  }
+
+  function reverseColumns(maps) {
+    return maps.reverse();
+  }
+}
