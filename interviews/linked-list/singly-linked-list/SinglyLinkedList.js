@@ -138,4 +138,34 @@ export class SinglyLinkedList {
     node.next = node.next.next;
     return true; // 성공적으로 삭제됨
   }
+
+  /**
+   * 리스트의 합:
+   * 두 리스트의 숫자 합을 계산하여 새 리스트로 반환하는 메서드
+   * @param {SinglyLinkedList} l1
+   * @param {SinglyLinkedList} l2
+   */
+  static addLists(l1, l2) {
+    let result = new SinglyLinkedList(); // 새로운 리스트를 위한 인스턴스 생성
+    let p1 = l1.head;
+    let p2 = l2.head;
+    let carry = 0;
+
+    while (p1 !== null || p2 !== null || carry > 0) {
+      let sum = carry;
+      if (p1 !== null) {
+        sum += p1.data;
+        p1 = p1.next;
+      }
+      if (p2 !== null) {
+        sum += p2.data;
+        p2 = p2.next;
+      }
+
+      result.append(sum % 10); // 새 노드에 합의 일의 자리 추가
+      carry = Math.floor(sum / 10); // 다음 자리수로 넘길 값
+    }
+
+    return result; // 새로운 리스트 반환
+  }
 }

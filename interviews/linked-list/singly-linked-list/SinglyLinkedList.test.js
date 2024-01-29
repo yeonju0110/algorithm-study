@@ -56,4 +56,19 @@ describe("SinglyLinkedList", () => {
 
     expect(list.print()).toBe("1 -> 2 -> 2 -> null");
   });
+
+  test("두 리스트의 합", () => {
+    const list1 = new SinglyLinkedList();
+    list1.append(7);
+    list1.append(1);
+    list1.append(6);
+
+    const list2 = new SinglyLinkedList();
+    list2.append(5);
+    list2.append(9);
+    list2.append(2);
+
+    const resultList = SinglyLinkedList.addLists(list1, list2);
+    expect(resultList.print()).toBe("2 -> 1 -> 9 -> null");
+  });
 });
