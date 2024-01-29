@@ -1,4 +1,4 @@
-import { SinglyLinkedList } from "./SinglyLinkedList";
+import { ListNode, SinglyLinkedList } from "./SinglyLinkedList";
 
 describe("SinglyLinkedList", () => {
   let list;
@@ -92,5 +92,39 @@ describe("SinglyLinkedList", () => {
     list.append(1);
 
     expect(list.isPalindrome()).toBe(false);
+  });
+
+  test("두 리스트가 교집합을 가지지 않는 경우", () => {
+    const list1 = new SinglyLinkedList();
+    list1.append(1);
+    list1.append(2);
+    list1.append(3);
+
+    const list2 = new SinglyLinkedList();
+    list2.append(4);
+    list2.append(5);
+    list2.append(6);
+
+    const intersection = SinglyLinkedList.findIntersection(list1, list2);
+    expect(intersection).toBeNull();
+  });
+
+  test("두 리스트가 교집합을 가지는 경우", () => {
+    // 공통 노드 생성
+    const commonNode = new ListNode(7);
+    commonNode.next = new ListNode(8);
+
+    const list1 = new SinglyLinkedList();
+    list1.append(1);
+    list1.append(2);
+    list1.head.next.next = commonNode; // 공통 노드 연결
+
+    const list2 = new SinglyLinkedList();
+    list2.append(4);
+    list2.append(5);
+    list2.head.next.next = commonNode; // 공통 노드 연결
+    const intersection = SinglyLinkedList.findIntersection(list1, list2);
+
+    expect(intersection).toBe(commonNode);
   });
 });

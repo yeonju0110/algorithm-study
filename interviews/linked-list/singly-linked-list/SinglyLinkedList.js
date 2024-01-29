@@ -1,4 +1,4 @@
-class ListNode {
+export class ListNode {
   constructor(data) {
     this.data = data;
     this.next = null; // 다음 노드를 가리키는 포인터
@@ -214,5 +214,63 @@ export class SinglyLinkedList {
 
     // 모든 검사를 통과하면 회문임
     return true;
+  }
+
+  // 리스트 길이와 마지막 노드를 구하는 메서드
+  getTailAndSize() {
+    let size = 0;
+    let current = this.head;
+    let tail = null;
+
+    while (current) {
+      size++;
+      tail = current;
+      current = current.next;
+    }
+
+    return { tail, size };
+  }
+
+  // 길이 차이만큼 노드를 이동시키는 메서드
+  getKthNode(k) {
+    let current = this.head;
+    while (k > 0 && current) {
+      current = current.next;
+      k--;
+    }
+    return current;
+  }
+
+  /**
+   * 교집합
+   * @param {SinglyLinkedList} list1
+   * @param {SinglyLinkedList} list2
+   * @returns
+   */
+  static findIntersection(list1, list2) {
+    if (!list1.head || !list2.head) return null;
+
+    const result1 = list1.getTailAndSize();
+    const result2 = list2.getTailAndSize();
+
+    if (result1.tail !== result2.tail) {
+      return null;
+    }
+
+    let shorter = result1.size < result2.size ? list1 : list2;
+    let longer = result1.size < result2.size ? list2 : list1;
+
+    longer = longer.getKthNode(Math.abs(result1.size - result2.size));
+
+    // TODO 오류
+    let shorterNode = shorter.head;
+    let longerNode = longer.head;
+
+    while (shorterNode !== longerNode && shorterNode && longerNode) {
+      shorterNode = shorterNode.next;
+      longerNode = longerNode.next;
+    }
+
+    return shorterNode;
   }
 }
