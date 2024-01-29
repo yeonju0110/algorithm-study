@@ -48,6 +48,18 @@ export class SinglyLinkedList {
     return false; // 삭제할 데이터가 리스트에 없음
   }
 
+  // 데이터 값으로 노드 찾기 메서드
+  findNode(data) {
+    let current = this.head;
+    while (current !== null) {
+      if (current.data === data) {
+        return current; // 데이터와 일치하는 노드 반환
+      }
+      current = current.next;
+    }
+    return null; // 해당 데이터 값을 가진 노드가 없을 경우
+  }
+
   // 리스트 출력
   print() {
     let current = this.head;
@@ -108,5 +120,22 @@ export class SinglyLinkedList {
 
     // p2는 이제 끝에서 k번째 노드를 가리킴
     return p2 ? p2.data : null; // p2가 null이 아니라면 데이터 반환, 그렇지 않으면 null 반환
+  }
+
+  /**
+   * 중간 노드 삭제
+   * 다음 노드의 데이터를 현재 노드에 복사한 다음에， 다음 노드를 지움.
+   * @param {ListNode} node
+   */
+  deleteNode(node) {
+    if (node === null || node.next === null) {
+      return false; // 삭제할 수 없음
+    }
+
+    // 다음 노드의 데이터를 현재 노드에 복사
+    node.data = node.next.data;
+    // 현재 노드를 다음 노드의 다음 노드로 "건너뛰게" 함
+    node.next = node.next.next;
+    return true; // 성공적으로 삭제됨
   }
 }

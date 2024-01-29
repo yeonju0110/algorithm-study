@@ -42,4 +42,18 @@ describe("SinglyLinkedList", () => {
 
     expect(list.findKthToLast(2)).toBe(3);
   });
+
+  test("중간 노드 삭제", () => {
+    list.append(1);
+    list.append(2);
+    list.append(3);
+    list.append(2);
+
+    const nodeToDelete = list.findNode(3);
+    if (nodeToDelete) {
+      list.deleteNode(nodeToDelete); // 찾은 노드 삭제
+    }
+
+    expect(list.print()).toBe("1 -> 2 -> 2 -> null");
+  });
 });
