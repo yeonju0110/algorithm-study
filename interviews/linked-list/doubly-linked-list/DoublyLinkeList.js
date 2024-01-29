@@ -100,4 +100,48 @@ export class DoublyLinkedList {
       current = current.next;
     }
   }
+
+  /**
+   * 분할:
+   * 주어진 값 x를 기준으로 노드 재배치
+   * @param {number} x
+   */
+  partition(x) {
+    let current = this.head;
+    let newHead = null;
+    let newTail = null;
+
+    while (current) {
+      const nextNode = current.next; // 현재 노드의 다음 노드 저장
+      current.next = null; // 현재 노드의 next와 prev를 초기화
+      current.prev = null;
+
+      if (current.data < x) {
+        // x보다 작은 노드는 새로운 헤드의 앞에 추가
+        if (!newHead) {
+          newHead = current;
+          newTail = current;
+        } else {
+          current.next = newHead;
+          newHead.prev = current;
+          newHead = current;
+        }
+      } else {
+        // x보다 크거나 같은 노드는 새로운 테일의 뒤에 추가
+        if (!newTail) {
+          newHead = current;
+          newTail = current;
+        } else {
+          newTail.next = current;
+          current.prev = newTail;
+          newTail = current;
+        }
+      }
+
+      current = nextNode;
+    }
+
+    this.head = newHead;
+    this.tail = newTail;
+  }
 }
