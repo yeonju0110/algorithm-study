@@ -71,4 +71,26 @@ describe("SinglyLinkedList", () => {
     const resultList = SinglyLinkedList.addLists(list1, list2);
     expect(resultList.print()).toBe("2 -> 1 -> 9 -> null");
   });
+
+  test("회문이 맞는지 검사", () => {
+    list.append(7);
+    list.append(1);
+    list.append(6);
+    list.append(6);
+    list.append(1);
+    list.append(7);
+
+    expect(list.isPalindrome()).toBe(true);
+  });
+
+  test("회문이 아닌지 검사", () => {
+    list.append(7);
+    list.append(1);
+    list.append(6);
+    list.append(6);
+    list.append(1);
+    list.append(1);
+
+    expect(list.isPalindrome()).toBe(false);
+  });
 });

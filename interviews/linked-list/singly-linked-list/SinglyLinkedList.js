@@ -179,4 +179,40 @@ export class SinglyLinkedList {
 
     return result; // 새로운 리스트 반환
   }
+
+  /**
+   * 회문 검사
+   * 순환적 접근법
+   */
+  isPalindrome() {
+    let fast = this.head;
+    let slow = this.head;
+    const stack = [];
+
+    // fast 포인터는 두 칸씩, slow 포인터는 한 칸씩 이동
+    while (fast !== null && fast.next !== null) {
+      stack.push(slow.data); // slow 포인터가 지나가는 노드 데이터를 스택에 저장
+      slow = slow.next;
+      fast = fast.next.next;
+    }
+
+    // 리스트의 길이가 홀수인 경우, 중앙 요소는 회문 검사에서 제외
+    if (fast !== null) {
+      slow = slow.next;
+    }
+
+    // 후반부를 순회하면서 스택의 상위 요소와 비교
+    while (slow !== null) {
+      const top = stack.pop();
+
+      // 한 번이라도 다르면 회문이 아님
+      if (top !== slow.data) {
+        return false;
+      }
+      slow = slow.next;
+    }
+
+    // 모든 검사를 통과하면 회문임
+    return true;
+  }
 }
