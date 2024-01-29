@@ -1,4 +1,5 @@
 import { ListNode, SinglyLinkedList } from "./SinglyLinkedList";
+import { addLists } from "./SinglyLinkedList.util";
 
 describe("SinglyLinkedList", () => {
   let list;
@@ -68,7 +69,7 @@ describe("SinglyLinkedList", () => {
     list2.append(9);
     list2.append(2);
 
-    const resultList = SinglyLinkedList.addLists(list1, list2);
+    const resultList = addLists(list1, list2);
     expect(resultList.print()).toBe("2 -> 1 -> 9 -> null");
   });
 
