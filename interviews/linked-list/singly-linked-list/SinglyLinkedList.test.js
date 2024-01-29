@@ -33,4 +33,13 @@ describe("SinglyLinkedList", () => {
     list.removeDuplicates();
     expect(list.print()).toBe("1 -> 2 -> 3 -> null");
   });
+
+  test("뒤에서 k번째 원소 구하기", () => {
+    list.append(1);
+    list.append(2);
+    list.append(3);
+    list.append(2);
+
+    expect(list.findKthToLast(2)).toBe(3);
+  });
 });

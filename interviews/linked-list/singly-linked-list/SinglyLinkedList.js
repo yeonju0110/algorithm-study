@@ -82,4 +82,31 @@ export class SinglyLinkedList {
       current = current.next;
     }
   }
+
+  /**
+   * 뒤에서 k번째 원소 구하기
+   * @param {number} k
+   */
+  findKthToLast(k) {
+    let p1 = this.head;
+    let p2 = this.head;
+
+    // p1을 k 노드 앞으로 이동
+    for (let i = 0; i < k; i++) {
+      if (p1 === null) {
+        // k가 리스트의 길이보다 큰 경우
+        return null;
+      }
+      p1 = p1.next;
+    }
+
+    // p1과 p2를 동시에 움직여, p1이 리스트 끝에 도달했을 때 p2의 위치 확인
+    while (p1 !== null) {
+      p1 = p1.next;
+      p2 = p2.next;
+    }
+
+    // p2는 이제 끝에서 k번째 노드를 가리킴
+    return p2 ? p2.data : null; // p2가 null이 아니라면 데이터 반환, 그렇지 않으면 null 반환
+  }
 }
