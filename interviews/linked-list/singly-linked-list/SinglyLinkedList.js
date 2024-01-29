@@ -273,4 +273,30 @@ export class SinglyLinkedList {
 
     return shorterNode;
   }
+
+  /**
+   * 루프 발견
+   */
+  detectCycle() {
+    let slow = this.head;
+    let fast = this.head;
+
+    while (fast !== null && fast.next !== null) {
+      slow = slow.next;
+      fast = fast.next.next;
+
+      // 만난 경우, 순환 존재
+      if (slow === fast) {
+        // 시작 노드 찾기
+        slow = this.head;
+        while (slow !== fast) {
+          slow = slow.next;
+          fast = fast.next;
+        }
+        return slow; // 순환 시작 노드 반환
+      }
+    }
+
+    return null; // 순환 없음
+  }
 }

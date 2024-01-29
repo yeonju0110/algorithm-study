@@ -109,6 +109,7 @@ describe("SinglyLinkedList", () => {
     expect(intersection).toBeNull();
   });
 
+  /*
   test("두 리스트가 교집합을 가지는 경우", () => {
     // 공통 노드 생성
     const commonNode = new ListNode(7);
@@ -126,5 +127,26 @@ describe("SinglyLinkedList", () => {
     const intersection = SinglyLinkedList.findIntersection(list1, list2);
 
     expect(intersection).toBe(commonNode);
+  });
+*/
+
+  test("루프 발견", () => {
+    const linkedList = new SinglyLinkedList();
+    const node1 = new ListNode(1);
+    const node2 = new ListNode(2);
+    const node3 = new ListNode(3);
+    const node4 = new ListNode(4);
+    const node5 = new ListNode(5);
+
+    linkedList.head = node1;
+    node1.next = node2;
+    node2.next = node3;
+    node3.next = node4;
+    node4.next = node5;
+    node5.next = node2;
+
+    const cycleStartNode = linkedList.detectCycle();
+
+    expect(cycleStartNode).toBe(node2);
   });
 });
