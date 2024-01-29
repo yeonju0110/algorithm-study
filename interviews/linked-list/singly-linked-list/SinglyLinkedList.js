@@ -60,6 +60,17 @@ export class SinglyLinkedList {
     return null; // 해당 데이터 값을 가진 노드가 없을 경우
   }
 
+  // 리스트 길이를 반환하는 메서드
+  length() {
+    let count = 0;
+    let current = this.head;
+    while (current) {
+      count++;
+      current = current.next;
+    }
+    return count;
+  }
+
   // 리스트 출력
   print() {
     let current = this.head;
