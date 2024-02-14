@@ -134,11 +134,13 @@ export class SinglyLinkedList {
   }
 
   /**
-   * 중간 노드 삭제
-   * 다음 노드의 데이터를 현재 노드에 복사한 다음에， 다음 노드를 지움.
+   * 중간 노드 삭제:
+   * 조건: 정확히 가운데 노드일 필요는 없고 처음과 끝 노드만 아니면 됨
+   * 구현 방법: 다음 노드의 데이터를 현재 노드에 복사한 다음에， 다음 노드를 지움.
    * @param {ListNode} node
    */
   deleteNode(node) {
+    // 단방향이기 때문에 첫번째 노드인지 알 방법이 없음
     if (node === null || node.next === null) {
       return false; // 삭제할 수 없음
     }
@@ -213,6 +215,7 @@ export class SinglyLinkedList {
 
   /**
    * 루프 발견
+   * 풀이 방법: fast(2n), slow(n) runner 이용
    */
   detectCycle() {
     let slow = this.head;

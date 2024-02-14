@@ -62,3 +62,15 @@ export function findIntersection(list1, list2) {
 
   return shorterNode;
 }
+
+/**
+ * 배열과 문자열
+ * 연결리스트
+ * 스택과 큐
+ * 트리와 그래프
+ * 비트 조작
+ * 수학 및 논리 퍼즐
+ * 객체 지향 설계
+ * 재귀와 동적 프로그래밍
+ * 시스템 설계 및 규모 확장성
+ */

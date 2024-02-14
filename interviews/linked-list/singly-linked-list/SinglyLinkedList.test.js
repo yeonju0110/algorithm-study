@@ -1,5 +1,5 @@
 import { ListNode, SinglyLinkedList } from "./SinglyLinkedList";
-import { addLists } from "./SinglyLinkedList.util";
+import { addLists, findIntersection } from "./SinglyLinkedList.util";
 
 describe("SinglyLinkedList", () => {
   let list;
@@ -58,7 +58,7 @@ describe("SinglyLinkedList", () => {
     expect(list.print()).toBe("1 -> 2 -> 2 -> null");
   });
 
-  test("두 리스트의 합", () => {
+  test("길이가 같은 두 리스트의 합", () => {
     const list1 = new SinglyLinkedList();
     list1.append(7);
     list1.append(1);
@@ -71,6 +71,20 @@ describe("SinglyLinkedList", () => {
 
     const resultList = addLists(list1, list2);
     expect(resultList.print()).toBe("2 -> 1 -> 9 -> null");
+  });
+
+  test("길이가 다른 두 리스트의 합", () => {
+    const list1 = new SinglyLinkedList();
+    list1.append(7);
+    list1.append(1);
+    list1.append(6);
+
+    const list2 = new SinglyLinkedList();
+    list2.append(5);
+    list2.append(9);
+
+    const resultList = addLists(list1, list2);
+    expect(resultList.print()).toBe("2 -> 1 -> 7 -> null");
   });
 
   test("회문이 맞는지 검사", () => {
@@ -106,7 +120,7 @@ describe("SinglyLinkedList", () => {
     list2.append(5);
     list2.append(6);
 
-    const intersection = SinglyLinkedList.findIntersection(list1, list2);
+    const intersection = findIntersection(list1, list2);
     expect(intersection).toBeNull();
   });
 
