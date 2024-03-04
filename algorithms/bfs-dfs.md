@@ -52,11 +52,11 @@ graph[2].append((0, 5))
 
 - O(N)
 
-- [예제](/python/dfs/5-4.py)
+- [예제](/python/이코테/dfs/5-4.py)
 
 ### 🫧 문제풀이
 
-- [음료수 얼려 먹기](/python/dfs/5-1.py)
+- [음료수 얼려 먹기](/python/이코테/dfs/5-1.py)
 
 ---
 
@@ -73,11 +73,11 @@ graph[2].append((0, 5))
 - O(N)
 - 일반적인 경우 실제 수행 시간은 DFS보다 좋은 편
 
-- [예제](/python/bfs/5-3.py)
+- [예제](/python/이코테/bfs/5-3.py)
 
 ### 🫧 문제풀이
 
-- [미로 탈출](/python/bfs/5-2.py)
+- [미로 탈출](/python/이코테/bfs/5-2.py)
 
 ---
 

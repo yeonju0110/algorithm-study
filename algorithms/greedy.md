@@ -8,8 +8,8 @@
 
 ### 🫧 문제풀이
 
-- [거스름돈](/python/greedy/3-1.py)
-- [큰 수의 법칙](/python/greedy/3-2.py)
-- [숫자 카드 게임](/python/greedy/3-3.py)
-- [1이 될 때까지](/python/greedy/3-4.py)
-- [체육복](/python/greedy/../programmers/%EC%B2%B4%EC%9C%A1%EB%B3%B5.ipynb)
+- [거스름돈](/python/이코테/greedy/3-1.py)
+- [큰 수의 법칙](/python/이코테/greedy/3-2.py)
+- [숫자 카드 게임](/python/이코테/greedy/3-3.py)
+- [1이 될 때까지](/python/이코테/greedy/3-4.py)
+- [체육복](/python/이코테/greedy/../programmers/%EC%B2%B4%EC%9C%A1%EB%B3%B5.ipynb)

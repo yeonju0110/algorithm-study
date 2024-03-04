@@ -5,7 +5,7 @@
 - 리스트 안에 있는 특정한 데이터를 찾기 위해, 앞에서부터 데이터를 하나씩 차례대로 확인
 - 보통 정렬되지 않은 리스트에서 데이터를 찾아야 할 때 사용
 - 최악의 경우: O(N)
-- [코드](/python/binary-search/7-1.py)
+- [코드](/python/이코테/binary-search/7-1.py)
 
 ## 이진 탐색
 
@@ -22,8 +22,8 @@
   - left = mid + 1
 - 찾으려는 데이터와 중간점 위치에 있는 데이터를 반복적으로 비교하여 탐색 범위를 줄여나감.
 
-1. [재귀 함수](/python/binary-search/7-2.py)
-2. [반복문](/python/binary-search/7-3.py)
+1. [재귀 함수](/python/이코테/binary-search/7-2.py)
+2. [반복문](/python/이코테/binary-search/7-3.py)
 
 ### 📍 전제조건
 
@@ -62,6 +62,6 @@
 
 #### 🫧 문제
 
-- [부품 찾기 - 재귀, 반복문](/python/binary-search/7-5.py)
-- [부품 찾기 - 계수정렬, 집합](/python/binary-search/7-6.py)
-- [떡볶이 떡 만들기](/python/binary-search/7-7.py)
+- [부품 찾기 - 재귀, 반복문](/python/이코테/binary-search/7-5.py)
+- [부품 찾기 - 계수정렬, 집합](/python/이코테/binary-search/7-6.py)
+- [떡볶이 떡 만들기](/python/이코테/binary-search/7-7.py)

@@ -29,8 +29,8 @@
 
 ### 🫧 문제풀이
 
-- [상하좌우](/python/implementation/4-1.py)
-- [시각](/python/implementation/4-2.py)
-- [그룹 단어 체커](/python/boj/1316.ipynb)
-- [8진수 2진수](/python/boj/1212.ipynb)
+- [상하좌우](/python/이코테/implementation/4-1.py)
+- [시각](/python/이코테/implementation/4-2.py)
+- [그룹 단어 체커](/python/이코테/boj/1316.ipynb)
+- [8진수 2진수](/python/이코테/boj/1212.ipynb)
 - [개인정보 수집 유효기간](/python/programmers/개인정보_수집_유효기간.py)
