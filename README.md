@@ -15,8 +15,11 @@
 
 ## 💚 자료구조
 
+- [배열](/data-structure/array/)
+- [연결리스트](./data-structure/linked-list/)
 - [스택](/data-structure/stack/)
 - [큐](/data-structure/queue/)
 - [우선순위 큐](/data-structure/priority-queue/)
 - [트리](./python/documents/자료구조/tree/개념.md)
-- [연결리스트](./data-structure/linked-list/)
+- [맵](/data-structure/map/)
+- [집합](/data-structure/set/)
