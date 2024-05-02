@@ -2,7 +2,7 @@
 
 ## 💚 알고리즘
 
-- [그리디](/algorithms/greedy.md)
+- [그리디](/algorithms/greedy/)
 - [구현](/algorithms/implementation.md)
 - [DFS, BFS](/algorithms/bfs-dfs.md)
 - [정렬](/algorithms/sort.md)
