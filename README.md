@@ -15,6 +15,8 @@
 
 ## 💚 자료구조
 
-- [스택, 큐](./python/documents/자료구조/스택%20큐.md)
+- [스택](/data-structure/stack/)
+- [큐](/data-structure/queue/)
+- [우선순위 큐](/data-structure/priority-queue/)
 - [트리](./python/documents/자료구조/tree/개념.md)
-- [연결리스트](./algorithms/linked-list/)
+- [연결리스트](./data-structure/linked-list/)

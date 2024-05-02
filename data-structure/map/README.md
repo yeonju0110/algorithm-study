@@ -1,4 +1,19 @@
-# 📑 딕서녀리 (사전 자료형)
+# 맵 Map (Dictionary)
+
+- Key, Value 쌍을 갖는다
+- 삽입/삭제: Python O(1) ⇒ hash, C++ O(logN) ⇒ red-black tree
+
+```python
+m = {}
+m["a"] = 40
+m["b"] = 100
+m["c"] = 50
+
+for k in m:
+	print(k, m[k])
+```
+
+## 📑 딕서녀리 (사전 자료형)
 
 - key와 value의 쌍을 데이터로 가지는 자료형
 - 순서가 있음
@@ -29,7 +44,7 @@ if '사과' in data:
 
 \*\* iterable 자료형 - 순차적인 정보를 담는 자료형들 (리스트, 문자열, 튜플) - in 문법 사용 가능
 
-## 🧷 사전 자료형 관련 메서드
+### 🧷 사전 자료형 관련 메서드
 
 📍 keys() : 키 데이터만 뽑아서 리스트로 이용
 📍 values() : 값 데이터만 뽑아서 리스트로 이용
@@ -53,7 +68,7 @@ for key in key_list:
 
 <br />
 
-### **딕셔너리 Value값을 기준으로 정렬**
+#### **딕셔너리 Value값을 기준으로 정렬**
 
 - 딕셔너리에 items() 메서드를 사용해주면 {"key" : value }의 형태를 [(key, value)]의 형태로 만들어 준다.
 - 이를 sorted해주면 **key값을 기준**으로 오름차순으로 정렬한다.
