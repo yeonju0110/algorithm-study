@@ -3,12 +3,13 @@
 ## 💚 알고리즘
 
 - [그리디](/algorithms/greedy/)
-- [브루트 포스, 백트래킹](/algorithms/brute-force/)
 - [구현](/algorithms/implementation.md)
-- [DFS, BFS](/algorithms/bfs-dfs/)
 - [정렬](/algorithms/sort.md)
+- 완전탐색
+  - [브루트 포스, 백트래킹](/algorithms/brute-force/)
+  - [DFS, BFS](/algorithms/bfs-dfs/)
 - [이진탐색](/algorithms/binary-search/)
-- [다이나믹 프로그래밍](/algorithms/dp.md)
+- [다이나믹 프로그래밍](/algorithms/dp/)
 - [다익스트라](/algorithms/dijkstra.md)
 - [그래프 이론](/algorithms//graph.md)
 - [기타 알고리즘](./python/documents/others.md)
