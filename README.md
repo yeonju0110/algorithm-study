@@ -5,7 +5,7 @@
 - [그리디](/algorithms/greedy/)
 - [브루트 포스, 백트래킹](/algorithms/brute-force/)
 - [구현](/algorithms/implementation.md)
-- [DFS, BFS](/algorithms/bfs-dfs.md)
+- [DFS, BFS](/algorithms/bfs-dfs/)
 - [정렬](/algorithms/sort.md)
 - [이진탐색](/algorithms/binary-search/)
 - [다이나믹 프로그래밍](/algorithms/dp.md)
