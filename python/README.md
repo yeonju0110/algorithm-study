@@ -175,7 +175,21 @@ s = {'1', '2', '3', '4', '5', '6'}
 # 주요 메서드들
 s.add(7)        # 원소 추가
 s.discard(7)    # 원소 제거 (없어도 에러 없음)
+s.remove(7)     # 원소 제거 (없으면 KeyError 발생)
 '1' in s        # True
+
+# remove vs discard 차이점
+s = {1, 2, 3, 4, 5}
+
+# discard: 원소가 없어도 에러 없음
+s.discard(10)   # 에러 없음, s = {1, 2, 3, 4, 5}
+
+# remove: 원소가 없으면 KeyError 발생
+# s.remove(10)  # KeyError: 10
+
+# 안전한 제거 방법
+if 10 in s:
+    s.remove(10)
 
 # 집합 연산
 판콜에이 = {'A', 'B', 'C'}
